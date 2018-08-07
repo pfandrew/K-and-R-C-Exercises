@@ -4,9 +4,9 @@
 //Final version of temperature conversion program from chapter 1. Uses all language features taught up to section 1.4
 
 #include <stdio.h>
-#define	LOWER 	0
+#define	LOWER	0
 #define	UPPER	300
-#define STEP 	20
+#define	STEP	20
 
 int main(){
 	int fahr;
