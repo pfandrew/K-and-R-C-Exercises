@@ -8,7 +8,7 @@
 #include <stdio.h>
 
 #define MAX_LENGTH 	20
-#define IN 			1
+#define IN 		1
 #define OUT 		0
 
 int main(){
