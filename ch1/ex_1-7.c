@@ -6,9 +6,5 @@
 #include <stdio.h>
 
 int main(){
-	int c;
-	while((c = getchar()) != EOF){
-	}
-
-	printf("EOF value: %d\n", c);
+	printf("EOF value: %d\n", EOF);
 }
