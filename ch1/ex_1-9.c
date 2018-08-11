@@ -18,9 +18,6 @@ int main(){
 		else if(c == ' '){
 			blanks = 1;
 		}
-		else {
-			blanks = 0;
-		}
 		putchar(c);
 	}
 }
