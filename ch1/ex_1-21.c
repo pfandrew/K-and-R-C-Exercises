@@ -51,7 +51,7 @@ int main(){
 			++column;
 		}		
 	}
-	input[MAX_LENGTH - 1] = '\0';
+	input[i] = '\0';
 	
 
 
