@@ -45,12 +45,10 @@ int main(){
 				--blanks;
 				++i;
 			}
-		}
-
-		if(c != ' ' && c != '\n' && c != '\t'){
-			++column;
+			
 			input[i] = c;
 			++i;
+			++column;
 		}		
 	}
 	input[MAX_LENGTH - 1] = '\0';
