@@ -46,11 +46,11 @@ void reverse(char s[], int len){
 	
 	//calculate stopping point for reverse
 	half = (len - state) / 2;
-	
+	j = len - 1 - state;
 	for(i = 0; i < half; ++i){
-		j = len - 1 - state - i;
 		tmp = s[i];
 		s[i] = s[j];
 		s[j] = tmp;	
+		--j;
 	}
 }
