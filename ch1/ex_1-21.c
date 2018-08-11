@@ -45,11 +45,12 @@ int main(){
 				--blanks;
 				++i;
 			}
-			
-			input[i] = c;
-			++i;
-			++column;
-		}		
+		}
+		
+		input[i] = c;
+		++i;
+		++column;
+				
 	}
 	input[i] = '\0';
 	
