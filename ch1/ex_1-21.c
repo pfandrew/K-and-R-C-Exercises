@@ -53,7 +53,7 @@ int main(){
 			++i;
 		}		
 	}
-	input[MAX_LENGTH - 1] = '\0';
+	input[i] = '\0';
 	
 
 
