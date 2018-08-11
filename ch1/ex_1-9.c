@@ -9,11 +9,17 @@ int main(){
 	int c, blanks;
 	blanks = 0;
 	while((c = getchar()) != EOF){
-		if(c == ' '){
-			putchar(c);
+		if(blanks){
 			while(c == ' '){
 				c = getchar();
 			}
+			blanks = 0;
+		}
+		else if(c == ' '){
+			blanks = 1;
+		}
+		else {
+			blanks = 0;
 		}
 		putchar(c);
 	}
