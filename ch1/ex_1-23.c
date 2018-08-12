@@ -21,8 +21,7 @@ int main(){
 
 	//take in program line by line, and show it back to user
 	while(i < MAX_PROGRAM_LENGTH - 1 && (c = getchar()) != EOF){
-		program_in[i] = c;
-		++i;
+		program_in[i++] = c;
 	}
 	program_in[i] = '\0';
 	printf("\n\n//ORIGINAL PROGRAM: \n%s\n", program_in);
