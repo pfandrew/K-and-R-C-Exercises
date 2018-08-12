@@ -226,9 +226,9 @@ int main(){
 		report_error(LA, last_la);				
 	if(lc > rc)
 		report_error(t_LC, last_lc);				
-	if(sq / 2 != (int)((float)dq / 2))
+	if(sq / 2 == (sq-1) /  2)
 		report_error(SQ, last_sq);
-	if(dq / 2 != (int)((float)dq / 2))
+	if(dq / 2 == (dq-1)/2)
 		report_error(DQ, last_dq);
 		
 	return 0;
