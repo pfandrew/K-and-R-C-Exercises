@@ -102,5 +102,14 @@ int main(){
 
 	printf("Signed Long:  %lld <= X <=  %lld\n", low, high);
 	
-	//due to strange weirdness, I was not able to manually convert binary into floating point. for instance, sizeof(float) gives 4 bytes, yet strangely a variable such as "float f" could store 8 bytes! And it did not seem to have: 1) a sign bit, 2) an exponent bit string or 3) a significand bit string. No manipulations to the string could result in a negative floating point number on my machine, or a change in the point position. In other words, float f = 0b11111111111111111111111111111111111111111111111111111111111111 (64 bits) simply out puts a 64 bit number. Will update this exercise as I learn more about floating point computation on my computer.
+	/*due to strange weirdness, I was not able to manually convert binary into floating point. 
+	for instance, sizeof(float) gives 4 bytes, yet strangely a variable such as "float f" could store 8 bytes! 
+	And it did not seem to have: 1) a sign bit, 2) an exponent bit string or 3) a significand bit string. 
+	No manipulations to the string could result in a negative floating point number on my machine, 
+	or a change in the point position. 
+	
+	In other words, float f = 0b11111111111111111111111111111111111111111111111111111111111111 (64 bits) 
+	simply out puts a 64 bit number. 
+	
+	Will update this exercise as I learn more about floating point computation on my computer.*/
 }
