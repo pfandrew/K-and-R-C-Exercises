@@ -109,7 +109,8 @@ int main(){
 	or a change in the point position. 
 	
 	In other words, float f = 0b11111111111111111111111111111111111111111111111111111111111111 (64 bits) 
-	simply out puts a 64 bit number. 
+	simply out puts a 64 bit number. I assume some conversion to double must be occuring underneath the hood, since floats
+	cannot store 64 bits of data.
 	
 	Will update this exercise as I learn more about floating point computation on my computer.*/
 }
