@@ -2,7 +2,7 @@
 //run: ./a.out
 
 //Exercise 2-1: Write a loop equivalent to the for loop above without using && or ||.
-
+#include <stdio.h>
 #define MAX 1000
 
 int main(){
