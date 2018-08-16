@@ -26,7 +26,7 @@ long int h2d(char hex[]){
 		upper = lower = number = FALSE;
 	}
 
-	if(hex[i] != '\0'){
+	if(c != '\0'){
 		printf("Error at pos %d of input: '%c' is not a number or hex digit. Stopping...\n", i, c);
 		return -1;
 	}
