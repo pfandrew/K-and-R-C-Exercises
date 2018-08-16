@@ -27,10 +27,7 @@ long int h2d(char hex[]){
 	}
 
 	if(hex[i] != '\0'){
-		while((c = hex[i]) != '\0'){
-			printf("Error at pos %d of input: '%c' is not a number or hex digit.\n", i, c);;
-			i++;
-		}
+		printf("Error at pos %d of input: '%c' is not a number or hex digit. Stopping...\n", i, c);
 		return -1;
 	}
 	else
