@@ -25,7 +25,7 @@ int main(){
 
 	//testing atoi()
 	printf("Enter a number: ");
-	while(i < MAX - 1 && (c = getchar()) != '\n')
+	while(i < MAX - 1 && (c = getchar()) != '\n' && c != EOF)
 		input[i++] = c;
 	input[i] = '\0';
 	printf("After atoi: %d\n\n", atoi(input));
