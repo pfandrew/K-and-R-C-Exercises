@@ -1,4 +1,4 @@
-//compile: gcc ex_2-1.c
+//compile: gcc ex_2-2.c
 //run: ./a.out
 
 //Exercise 2-1: Write a loop equivalent to the for loop above without using && or ||.
