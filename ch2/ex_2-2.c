@@ -14,7 +14,7 @@ int main(){
 	char s[MAX];
 	int i, c;
 	i = 0;
-	//technically 'break' has not been introduced yet in the book, but that would be easier.
+	//'break' has not been introduced yet in the book
 	c = getchar();
 	while(c != '\n'){
 		if(i >= MAX - 1)
