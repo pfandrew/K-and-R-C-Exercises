@@ -32,7 +32,7 @@ int main(){
 
 	//testing lower()
 	i = 0;
-	printf("Enter a string with some upper-case leetters: ");
+	printf("Enter a string with some upper-case letters: ");
 	while(i < MAX - 1 && (c = getchar()) != '\n' && c != EOF)
 		input[i++] = lower(c);
 	input[i] = '\0';
