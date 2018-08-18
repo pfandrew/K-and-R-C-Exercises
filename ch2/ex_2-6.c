@@ -14,18 +14,14 @@ void print_binary(unsigned int d){
 		if(d < tmp){
 			print_binary(d >> 1);
 			printf("1");
-			return;
 			
 		}
 		else
 		{
 			print_binary(d >> 1);
 			printf("0");
-			return;
 		}	
 	}
-	else
-		return;
 }
 
 int power(int base, int exp){
@@ -36,35 +32,15 @@ int power(int base, int exp){
 }
 
 int setbits(int x, int p, int n, int y){
-	int y_cut, x_right_cut, i, tmp;
-	i = 0;
-	y_cut = 0;
-	x_right_cut = 0;
+	int y_cut, x_right_cut;
 	
-	//obtain right cut of y and position it
-	while(i < n){
-		tmp = y;
-		y = y >> 1;
-		y = y << 1;
-		if(y < tmp)
-			y_cut += power(2, i);
-		y = y >> 1;
-		i++;
-	}
-	y_cut = y_cut << p;
-	
-	//obtain right cut of x to preserve for final OR
-	i = 0;
-	while(i < p){
-		tmp = x;
-		x = x >> 1;
-		x = x << 1;
-		if(x < tmp)
-			x_right_cut += power(2, i);
-		x = x >> 1;
-		i++;
-	}
-
+	//obtain right cut of y and right cuts of x
+	y_cut = (~(~0 << n) & y) << p;
+	print_binary(y_cut);
+	printf("\n");
+	x_cut = ~(~0 << p) & x;
+	print_binary(x_cut);
+	printf("\n");
 	//obtain left cut of x for final or
 	x = x >> n;
 	x = x  << (n + p);
