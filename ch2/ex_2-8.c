@@ -26,7 +26,7 @@ int rightrot(int x, int n){
 		for(i = 1; i <= x; len++)
 			i *= 2;
 
-		//rotate one by one; could also cut and place with modulus when n > len
+		//rotate one by one; could also cut section in bulk and place at n % len when n > len;
 		for(i = 0; i < n; i++){
 			if(1 & x){
 				cut = (1 << accum) << (len - accum - 1);
