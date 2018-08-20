@@ -1,7 +1,7 @@
 //compile: gcc ex_2-3.c
 //run: ./a.out
 
-//Exercise 2-3: Write a function expand(s1,s2) that expands a shorthand notations like a-z in the string s1 into the equivalent list abc...xyz in s2. All for letters of either case and digits, and be prepared to handle cases like a-b-c and a-z0-9 and -a-z. Arrange that a leading or trailing - is taken literally.
+//Exercise 3-3: Write a function expand(s1,s2) that expands a shorthand notations like a-z in the string s1 into the equivalent list abc...xyz in s2. All for letters of either case and digits, and be prepared to handle cases like a-b-c and a-z0-9 and -a-z. Arrange that a leading or trailing - is taken literally.
 
 #include <stdio.h>
 #define MAX 1000
