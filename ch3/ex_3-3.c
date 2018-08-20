@@ -3,30 +3,8 @@
 
 //Exercise 2-3: Write a function expand(s1,s2) that expands a shorthand notations like a-z in the string s1 into the equivalent list abc...xyz in s2. All for letters of either case and digits, and be prepared to handle cases like a-b-c and a-z0-9 and -a-z. Arrange that a leading or trailing - is taken literally.
 
-/*
-	token 1: uppercase letter, lowercase letter, digit
-	token 2: -
-	token 3: if no token, do not expand. if token is not of same type, do not expand. if token is of same type, expand to that location
-
-	engine algorithm:
-		grab token
-		looking for other end of expansion?
-		looking for hyphen?
-		ucase letter?
-			place in s2
-			look for hyphen and ucase
-		lcase letter?
-			place in s2
-		digit?
-*/
-
 #include <stdio.h>
 #define MAX 1000
-#define IN 1
-#define OUT 0
-#define UPPER 0b100
-#define LOWER 0b010
-#define DIGIT 0b001
 
 int state(char c){
 	return 0b111 & ((c >= 97 && c <= 122) << 2 | (c >= 65 && c <= 90) << 1 | (c - '0' >= 0 && c - '0' <= 9));
