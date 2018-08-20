@@ -16,7 +16,7 @@ void expand(char s1[], char s2[]){
 		if(c == '-' && k > 0){
 			d = s2[k-1];
 			e = s1[i];
-			if(state(d) && (state(d) == state(e)) && d < e){
+			if(state(d) && d < e && (state(d) == state(e))){
 				i++;
 				while(d++ < e && k < MAX - 1){
 					s2[k++] = d;
