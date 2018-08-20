@@ -13,7 +13,7 @@ int state(char c){
 void expand(char s1[], char s2[]){
 	int c, d, e, i, k;
 	for(i = 0, k = 0; i < MAX - 1 && k < MAX - 1 && (c = s1[i++]) != '\0' ;){
-		if(c == '-' && i > 0 && k > 0){
+		if(c == '-' && k > 0){
 			d = s2[k-1];
 			e = s1[i];
 			if(state(d) && (state(d) == state(e)) && d < e){
