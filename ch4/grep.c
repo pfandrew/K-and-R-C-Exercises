@@ -1,4 +1,4 @@
-//example from section 4.1; finds all occurences of a pettern in another string
+//example from section 4.1; finds all occurences of a pattern in another string
 
 #include <stdio.h>
 #define MAXLINE 1000
