@@ -3,6 +3,6 @@ Updating as I complete exercises from the C Programming Language, by Kernighan a
 
 Solutions use only language features presented up to that point in the book.
 
-Source files with prefix "ex_" are my original solutions. All other source files are copied (with minor changes) directly from the book, and have references to the sections that they come from.
+Source files with prefix "ex_" are my original solutions. Some of them use functions like reverse() which are copied directly out of the book to aid with the solution. All other source files that do not have the prefix "ex_" are copied (with minor changes) directly from the book, and therefore have references to the sections that they come from.
 
-Lots of solutions are very messy/ugly, I appreciate any feedback as I am still a beginner.
+I appreciate any feedback on these solutions!
