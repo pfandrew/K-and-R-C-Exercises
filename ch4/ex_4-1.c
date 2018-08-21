@@ -3,7 +3,8 @@
 
 //Exercise 4-1: Write the function strrindex(s,t), which returns the position of the rightmost occurrence of t in s, or -1 if there is none
 
-//NOTE: The solution requires only a minor change to the previously implemented str_index() function. Another faster solution could involve going backwards through the provided strings in strrindex.
+//NOTE: The solution requires only a minor change to the previously implemented str_index() function. 
+//Another faster solution could involve going backwards through the provided strings in strrindex.
 
 #include <stdio.h>
 #define MAXLINE 1000
