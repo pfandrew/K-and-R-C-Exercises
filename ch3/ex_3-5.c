@@ -36,7 +36,7 @@ void itob(int n, char s[], int b){
 			s[i++] = d; 
 	} while((n /= b) != 0);
 
-	if(!(sign + 1))
+	if(sign == NEG)
 		s[i++] = '-';
 	s[i] = '\0';
 	reverse(s);
