@@ -1,8 +1,7 @@
 //compile: gcc ex_4-3.c
 //run: ./a.out
 
-//Exercise 4-3: Given the basic framework, it's straightforward to extend the calculator. 
-//Add the modulus (%) operator and provisions for negative numbers.
+//Exercise 4-3: Given the basic framework, it's straightforward to extend the calculator. Add the modulus (%) operator and provisions for negative numbers.
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -18,11 +17,14 @@ void push(double);
 double pop(void);
 int getch(void);
 void ungetch(int);
+void clear_stack();
+
 
 int sp = 0;
 double val[MAXVAL];
 char buf[BUFSIZE];
 int bufp = 0;
+int tmp = 0;
 
 short curr_ops = 0;
 
@@ -71,6 +73,33 @@ int main(){
 			break;
 		case '\n':
 			printf("\t%.8f\n", pop());
+			break;
+		case 'd': // duplicate it
+			tmp = 0;
+			printf("Stack: ");
+			while(tmp < sp)
+				printf("%f ", val[tmp++]);
+			printf("\n");
+			break;
+		case 'c': //clear stack
+			while(sp > 0)
+				pop();
+			push(0.0);
+			break;
+		case 'p': //print top of stack
+			if(sp > 0)
+				printf("Top of stack: %f\n", val[sp - 1]);
+			else
+				push(0.0);
+			break;
+		case 's': //swap top two elements
+			if(sp >= 2)
+			{
+				op1 = pop();
+				op2 = pop();
+				push(op1);
+				push(op2);
+			}
 			break;
 		default:
 			printf("error: unknown command %s\n", s);
