@@ -1,5 +1,5 @@
-//program from section 4.3; calculator which stores input in reverse polish notation
-//in the book, these functions are written into seperate source file; 
+//program from section 4.3; calculator which accepts input in reverse polish notation
+//in the book, these functions are written into seperate source files 
 //they are a single source file to facilitate the upload of exercises
 
 #include <stdio.h>
