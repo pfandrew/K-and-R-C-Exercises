@@ -33,10 +33,8 @@ double atof(char s[]){
 			;
 		//calculate number for exp
 		while(isdigit(s[i])){
-			exp_num = 10 * exp_num + (s[i] - '0');
-			i++;
+			exp_num = 10 * exp_num + (s[i++] - '0');
 		}
-		printf("%d", exp_num);
 		//calculate exp value
 		while(exp_num-- > 0){
 			power = exp_sign == 1 ? power / 10.0 : power * 10.0;
