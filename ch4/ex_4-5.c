@@ -176,7 +176,7 @@ int getop(char s[]){
 	s[1] = '\0';
 
 	//check if any other chars we need to look for are input first	
-	if(c == '+' || c == '/' || c == '*' || c == '%' || c == '\n')
+	if(c == '+' || c == '/' || c == '*' || c == '%' || c == '\n' || c == EOF)
 		return c;
 	//handle minus as binary operator
 	else if(c == '-' && curr_ops  == 2)
