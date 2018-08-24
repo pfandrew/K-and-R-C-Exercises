@@ -111,7 +111,7 @@ void ungetch(int c){
 		printf("ungetch: too many characters\n");
 	else if(buf[0] == EOF) //don't allow new input into the buffer
 		return;
-	else if(c == EOF){ //clear buffer, add EOF, do not increment
+	else if(c == EOF){ //clear buffer, add EOF
 		bufp = 0;
 		buf[bufp++] = c;
 		return;
