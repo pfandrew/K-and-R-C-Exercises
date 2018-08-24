@@ -107,15 +107,15 @@ int getch(void){
 }
 
 void ungetch(int c){
-	if(bufp >= BUFSIZE)
+	if(bufp >= BUFSIZE && c != EOF)
 		printf("ungetch: too many characters\n");
-	else if(buf[0] == EOF) //disallow new input into the buffer
+	else if(buf[0] == EOF) //don't allow new input into the buffer
 		return;
 	else if(c == EOF){ //clear buffer, add EOF, do not increment
 		bufp = 0;
 		buf[bufp++] = c;
 		return;
 	}
-	else //store character peacefully
+	else //store character
 		buf[bufp++] = c;
 }
