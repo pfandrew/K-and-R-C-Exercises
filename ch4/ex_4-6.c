@@ -6,9 +6,9 @@
 
 /*NOTE: you can define a variable with "define [var_name] [double]", where var_name has to be a single letter, 
 and double has to be an integral value. You can print a variables value with "print [var_name]", 
-where var_name must be defined already, and must be a single letter. You can also use previously defined values with 
+where var_name must be defined already, and must be a single letter. You can also use previously defined values as 
 operands, such as "x y +. However, definitions cannot be made in terms of the results of other operations, for instance 
-"define x y z +", which defines x as y + z.
+"define x y z +", which would define x as y + z.
 finally, "last" is parsed as a function by the program, but does push(last) so it can be used in operations such as "last 8 +"
 */
 
@@ -232,6 +232,7 @@ void run_func(int i){
 			if((c = getch()) != '\n')
 				ungetch(c);
 			break;
+		//"last" parsed as function
 		case 13:
 			push(last);
 			curr_ops++;
