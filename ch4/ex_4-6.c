@@ -193,12 +193,10 @@ void run_func(int i){
 				num_arr[k++] = c;
 				while(isdigit(c = getch()))
 					num_arr[k++] = c;
-				if(c != EOF)
-					ungetch(c);
-
-				if((c = getch()) ==  '.')
+		
+				if(c ==  '.')
 					num_arr[k++] = c;
-				else
+				else if(c != EOF)
 					ungetch(c);
 				while(isdigit(c = getch()))
 					num_arr[k++] = c;
