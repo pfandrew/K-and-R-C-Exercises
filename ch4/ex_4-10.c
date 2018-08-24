@@ -1,7 +1,8 @@
 //compile: gcc ex_4-10.c
 //run: ./a.out
 
-//Exercise 4-10: An alternate organization uses getline to read an entire input line; this makes getch and ungetch unnecessary. Revise the calculator to use this approach.
+//Exercise 4-10: An alternate organization uses getline to read an entire input line; 
+//this makes getch and ungetch unnecessary. Revise the calculator to use this approach.
 
 
 #include <stdio.h>
@@ -117,6 +118,8 @@ int getop(char s[],  char t[], int index){
 
 int get_line(char s[], int lim){
 	int c, i;
+	//note that it still passes EOF. parser detects EOF manually 
+	//in case it is put in at the end of a line of input instead of a return
 	for(i = 0; i < lim - 1 && (c = getchar()) != '\n'; ++i)
 		s[i] = c;
 	if(c == '\n'){
