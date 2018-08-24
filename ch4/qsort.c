@@ -1,4 +1,5 @@
 //qsort implementation from section 4.10; uses recursion
+//if you're not familiar with qsort, reading this helps: https://en.wikipedia.org/wiki/Quicksort
 #include <stdio.h>
 void qsort(int v[], int left, int right){
 	int i, last;
