@@ -38,7 +38,6 @@ int main(){
 	int nums[MAXVAL];
 	while((c = get_int(&i)) > 0 && c != EOF){
 		nums[k++] = i;
-		i = 0;
 	}
 	printf("You entered: ");
 	for(i = 0; i < k; i++){
