@@ -5,7 +5,7 @@
 
 //NOTE: I *believe* the exercise is asking you to push back the sign, and not the space between the sign and the next number.
 //Ultimately, I'm not sure what it is asking you to do. So I pushed back the sign and reorganized the program such that the
-//sign followed by a white space applies to the next operator.
+//sign followed by a white space applies to the next number.
 
 #include <stdio.h>
 #include <ctype.h>
