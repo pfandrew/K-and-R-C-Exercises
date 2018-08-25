@@ -25,12 +25,12 @@ int get_double(double *dn){
 		;
 	if(!isdigit(c) && c != EOF && c != '=' && c != '-' && c != '+' && c != '.'){
 		ungetch(c);
-		return 0.0;
+		return 0;
 	}
 	sign = (c == '-') ? -1.0 : 1.0;
 	if(c == '+' || c == '-')
 		c = getch();
-	for(*dn = 0; isdigit(c); c = getch())
+	for(*dn = 0.0; isdigit(c); c = getch())
 		*dn = 10.0 * *dn + (c - '0');
 	if(c == '.'){
 		while(isdigit(c = getch())){
