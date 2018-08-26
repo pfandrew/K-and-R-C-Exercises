@@ -27,7 +27,7 @@ int main(){
 	int c, k = 0;
 	int nums[MAXVAL];
 	while((c = get_int(&nums[k++])) != 'e')
-		k = (k > 0) ? k + c : 0;
+		k += c;
 	printf("You entered: ");
 	for(c = 0; c < k - 1; c++){
 		printf(" %d", nums[c]);
