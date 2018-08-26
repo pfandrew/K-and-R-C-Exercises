@@ -16,7 +16,7 @@ int day_of_year(int year, int month, int day){
 		printf("Sorry, AD only\n");
 		return 0;
 	}
-	else if(month < 0 || month >= 12){
+	else if(month < 1 || month > 12){
 		printf("Month must be between 1 and 12\n");
 		return 0;
 	}
