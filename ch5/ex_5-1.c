@@ -1,7 +1,8 @@
 //compile: gcc ex_5-1.c
 //run: ./a.out
 
-//Exercise 5-1: As written, getint treats a + or - not followed by a digit as a valid representation of zero. Fix it to push such a character back on the input.
+//Exercise 5-1: As written, getint treats a + or - not followed by a digit as a valid representation of zero. 
+//Fix it to push such a character back on the input.
 
 //NOTE: I *believe* the exercise is asking you to push back the sign, and not the space between the sign and the next number.
 //Ultimately, I'm not sure what it is asking you to do. So I pushed back the sign and reorganized the program such that the
