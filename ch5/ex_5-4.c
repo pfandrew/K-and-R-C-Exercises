@@ -3,7 +3,6 @@
 
 //Exercise 5-4: Write the function strend(s,t), which returns 1 if the string t occurs at the end of the string s, and zero otherwise.
 #include <stdio.h>
-#include <string.h>
 
 int str_end(char* s, char* t){
 	int len_t = 0;
