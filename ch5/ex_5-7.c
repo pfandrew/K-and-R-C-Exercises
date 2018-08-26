@@ -35,7 +35,6 @@ int readlines(char *lineptr[], char buf[], int maxlines){
 	nlines = 0;
 	while ((len = get_line(line, MAXLEN)) > 0){
 		if(nlines >= maxlines && counter + len >= ALLOCSIZE){
-			printf("Executed from within getline loop\n");
 			return -1;
 		}
 		else{
