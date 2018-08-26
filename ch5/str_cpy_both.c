@@ -9,7 +9,7 @@ void str_cpy_arr(char s[], char t[]){
 }
 
 void str_cpy_ptr(char* s, char* t){
-	while((*s++ = *t++) != '\0')
+	while(*s++ = *t++)
 		;	
 }
 
