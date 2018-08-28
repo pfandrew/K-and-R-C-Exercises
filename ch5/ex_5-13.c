@@ -18,7 +18,7 @@ Section 5.6, not in a two-dimensional array of fixed size.
 #define MAXLINE 100
 #define MAXLINES 100
 
-int get_line(char *line, int maxline, char buf[]);
+int get_line(char *line, int maxline);
 char *str_cpy(char buf[], char line[]);
 void writelines(char *lineptr[], int begin, int end);
 
@@ -77,7 +77,7 @@ void writelines(char *lineptr[], int begin, int end){
 		printf("%s", lineptr[i]);
 }
 
-int get_line(char s[], int maxline, char buf[]){
+int get_line(char s[], int maxline){
 	int c, i = 0;
 	while(i < maxline - 1 && (c = getchar()) != EOF && c != '\n')
 		s[i++] = c;
