@@ -1,5 +1,5 @@
 //compile: gcc ex_5-13.c -o tail
-//run: ./a.out
+//run: tail -n
 
 /*Exercise 5-13: Write the program tail, which prints the last n lines of its input. By default, n is 10, let us say, 
 but it can be changed by an optional argument, so that
