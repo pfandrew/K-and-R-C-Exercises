@@ -3,8 +3,6 @@
 
 //Exercise 1-21: Write a program entab that replaces strings of blanks by the minimum number of tabs and blanks to achieve the same spacing. Use the same tab stops for detab. When either a tab or a single blank would suffice to reach a tab stop, which should be given preference?
 
-//NOTE: There's no directive for dealing with tabs as they are input. Should the inputted tabs be counted as blanks according to the tab stops of the input, or according to the tab stop length defined within the program? It is assumed that input tabs are of length '4'.	
-
 #include <stdio.h>
 #define TAB_WIDTH 5
 #define IN_TAB_WIDTH 4
