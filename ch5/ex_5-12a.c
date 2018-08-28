@@ -1,4 +1,4 @@
-//compile: gcc ex_5-12b.c
+//compile: gcc ex_5-12a.c
 //run: ./a.out
 
 /*Exercise 5-12: Extend entab and detab to accept the shorthand
