@@ -1,15 +1,19 @@
 //compile: gcc ex_5-13.c
 //run: ./a.out
 
-/*Exercise 5-13: Write the program tail, which prints the last n lines of its input. By default, n is 10, let us say, but it can be changed by an optional argument, so that
+/*Exercise 5-13: Write the program tail, which prints the last n lines of its input. By default, n is 10, let us say, 
+but it can be changed by an optional argument, so that
 
 	tail -n
 
-prints the last n lines. The program should behave rationally no matter how unreasonable the input or the value of n. Write the program so it makes the best use of available storage; lines should be stored as in the sorting program of Section 5.6, not in a two-dimensional array of fixed size.
+prints the last n lines. The program should behave rationally no matter how unreasonable the input or the value of n. 
+Write the program so it makes the best use of available storage; lines should be stored as in the sorting program of 
+Section 5.6, not in a two-dimensional array of fixed size.
 */
 
 #include <stdio.h>
 #include <ctype.h>
+
 #define ALLOCSIZE 10000
 #define MAXLINE 100
 #define MAXLINES 100
@@ -19,7 +23,7 @@ char *str_cpy(char buf[], char line[]);
 void writelines(char *lineptr[], int begin, int end);
 
 int main(int argc, char *argv[]){
-	int lines = 0, accept = 1, d, len;
+	int lines = 0, accept = 1, d;
 	
 	//grab number from argument
 	if(argc < 2){
@@ -46,7 +50,7 @@ int main(int argc, char *argv[]){
 	static char buf[ALLOCSIZE];
 	static int buf_i;
 	char line[MAXLINE];
-	int space = 1, line_no = 0;
+	int space = 1, line_no = 0, len;
 
 	//begin input
 	while((len = get_line(line, MAXLINE, buf)) > 0 && space){
