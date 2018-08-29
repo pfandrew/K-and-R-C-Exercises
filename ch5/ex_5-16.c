@@ -1,5 +1,5 @@
-//compile: gcc ex_5-15.c -o ex515
-//run: ex515 -[r, n, f]
+//compile: gcc ex_5-16.c -o ex516
+//run: ex516 -[r, n, f, d]
 
 //Exercise 5-16: Add the -d ("directory order") option, which makes comparisons only on letters, numbers and blanks. Make sure it works in conjunction with f.
 
