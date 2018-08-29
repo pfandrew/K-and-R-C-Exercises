@@ -160,9 +160,3 @@ int str_cmp(char *s, char *t){
 	}
 	return *s - *t;
 }
-
-char *find_next(char *s){
-	while(!isalnum(*s) && !isspace(*s) && *s != '\0')
-		s++;
-	return s;
-}
