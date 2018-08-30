@@ -8,8 +8,8 @@
 	This program solves the problem for the example itself, not for any type of line entered
 	MAX fields: 2
 	Types of fields: strings, numbers
-	Fields are input seperately with prompt from the user
-	argc == 1 -> 1 field
+	Fields are input seperately with prompt for the user
+	no options -> 1 field
 	Strings must be input first
 	sorting by strings can only be done between lines (line 1 is sorted relative to the rest of the lines, etc.)
 	sorting numbers results in number strings being sorted with numbers in that string
