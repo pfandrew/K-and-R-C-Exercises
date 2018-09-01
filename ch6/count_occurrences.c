@@ -1,4 +1,4 @@
-//program from section 6.3; uses struct arrays to facilitate counting of occurrences of C keywords
+//program from section 6.3; uses struct array to facilitate counting of occurrences of C keywords
 
 #include <stdio.h>
 #include <ctype.h>
