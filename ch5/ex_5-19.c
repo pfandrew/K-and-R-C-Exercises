@@ -1,4 +1,4 @@
-//compile: gcc ex_5-19.c ex519
+//compile: gcc ex_5-19.c
 //run: ./a.out
 
 //Exercise 5-19: Modify undcl so that it does not add redundant parentheses to declarations.
