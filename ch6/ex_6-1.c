@@ -101,7 +101,7 @@ int getword(char *word, int lim){
 	if(c != EOF)
 		*w++ = c;
 	
-	//check if we are in a state, except preprocessor
+	//check if we are in a state which would invalidate usage of word
 	if(state&_SQ || state&_DQ || state&_MLC || state&_SLC || state&_PP){
 		if(state&_SLC){
 			while(c != '\n'){
