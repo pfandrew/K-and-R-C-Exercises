@@ -9,19 +9,19 @@
 
 #define MAXWORD 100
 #define BUFSIZE 100
-#define _SQ		0b000001
-#define _DQ		0b000010
+#define _SQ	0b000001
+#define _DQ	0b000010
 #define _SLC	0b000100
 #define _MLC 	0b001000
-#define _PP		0b010000
-#define _ES		0b100000
+#define _PP	0b010000
+#define _ES	0b100000
 
 #define SQ 	'\''
 #define DQ	'\"'
 #define FS	'/'
-#define ES '\\'
-#define PP '#'
-#define US '_'
+#define ES 	'\\'
+#define PP 	'#'
+#define US 	'_'
 
 short state = 0;
 
