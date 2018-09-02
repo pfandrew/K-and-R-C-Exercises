@@ -12,8 +12,8 @@
 #define MAXCMP  6
 #define BUFSIZE 100
 
-#define _ES		0b100000
-#define _PP		0b010000
+#define _ES	0b100000
+#define _PP	0b010000
 #define _SQ 	0b001000
 #define _DQ 	0b000100
 #define _SLC	0b000010
