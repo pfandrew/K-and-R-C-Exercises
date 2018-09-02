@@ -246,7 +246,7 @@ int getword(char *s, int max){
 		else if(c == PP)
 			state |= _PP;
 	}
-	//variable names cannot start with non-alphanumeric characters, other than underscore
+	//variable names cannot start with non-alpha characters, other than underscore
 	else if (isalpha(c) || c == '_'){
 		*w++ = c;
 		//grab word
