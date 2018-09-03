@@ -1,7 +1,8 @@
 //compile: gcc ex_6-4.c
 //run: ./a.out
 
-//Exercise 6-4: Write a program that prints the distinct words in its input sorted into decreasing order of frequency of occurrence. Precede each word by its count.
+//Exercise 6-4: Write a program that prints the distinct words in its input sorted into decreasing order of frequency of 
+//occurrence. Precede each word by its count.
 
 
 #include <stdio.h>
