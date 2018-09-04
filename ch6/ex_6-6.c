@@ -186,7 +186,6 @@ int getword(char *s, int max){
 			if(state&_DQ)
 				state ^= _DQ;
 			defn[i] = '\0';
-			printf("%s", defn);
 			*w = '\0';
 			
 			//install name-definition
@@ -204,7 +203,6 @@ int getword(char *s, int max){
 				ungetch(c);
 			*w = '\0';
 			state ^= _PP; 
-			printf("%d\n", state);	
 		}
 		else if(state&_SQ){
 			while(state&_SQ && c != EOF){
