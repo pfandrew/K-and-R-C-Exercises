@@ -153,7 +153,7 @@ int getword(char *s, int max){
 			
 			//make sure it is not a keyword
 			for(i = 0; k < KEYWORDS; k++){
-				if(strcmp(name, keywords[i]) == 0)
+				if(strcmp(&name[0], keywords[i]) == 0)
 					definable = 0;
 			}
 
