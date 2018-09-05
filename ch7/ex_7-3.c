@@ -1,10 +1,15 @@
-//program from section 7.3; minimal version of printf
+//compile: gcc ex_7-3.c
+//run: ./a.out
+
+//Exercise 7-3: Revice minprintf to handle more of the other facilities of printf.
 #include <stdarg.h>
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
+
 #define MAX 100
+
 void minprintf(char *fmt, ...);
 
 
