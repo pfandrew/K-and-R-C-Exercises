@@ -1,6 +1,8 @@
 //compile: gcc ex_7-6.c -o fcmp
 //run: ./fcmp [filename] [filename]
 
+//Exercise 7-6: Write a program to compare two files, printing the first line where they differ.
+
 #include <stdio.h>
 #define MAXLINE 10000
 int comparefiles(char *, char *);
