@@ -1,7 +1,7 @@
 //compile: gcc ex_7-3.c
 //run: ./a.out
 
-//Exercise 7-3: Revice minprintf to handle more of the other facilities of printf.
+//Exercise 7-3: Revise minprintf to handle more of the other facilities of printf.
 #include <stdarg.h>
 #include <stdio.h>
 #include <string.h>
