@@ -16,15 +16,13 @@ int main(int argc, char *argv[]){
 	else{
 		if(argc > FNAMESTART + MAXFILES)
 			printf("max files exceeded. listing only first %d", MAXFILES);
-		for(i = 0; i < MAXFILES && argc-- > FNAMESTART; i++)
+		for(i = 0; i < MAXFILES && argc-- > FNAMESTART; i++){
 			fpa[i] = fopen(argv[i + FNAMESTART], "r");
+			printpage(fpa[i], argv[i + FNAMESTART], i + 1);
+			fclose(fpa[i]);
+		}
 	}
 
-	int files = i;
-	for(i = 0; i < files; i++){
-		printpage(fpa[i], argv[i + FNAMESTART], i + 1);
-		fclose(fpa[i]);
-	}
 }
 
 void printpage(FILE *fp, char *filename, int page){
