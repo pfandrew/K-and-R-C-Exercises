@@ -30,7 +30,7 @@ int main(int argc, char *argv[]){
 }
 
 void filecopy(int in, int out){
-	int c, n;
-	while((n = read(in, &c, 1)) > 0)
+	int c;
+	while(read(in, &c, 1) > 0)
 		write(out, &c, 1);
 }
