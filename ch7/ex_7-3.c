@@ -99,13 +99,13 @@ void minprintf(char *fmt, ...){
 			
 			if(!left_adj) //we need to add padding before
 			{
-				for(; padding-- > 0; )
+				while(padding-- > 0)
 					putchar(' ');
 			}
-			for(; precision-- > 0; sval++)
+			for(;precision-- > 0; sval++)
 				putchar(*sval);
 			if(left_adj){
-				for(; padding-- > 0;)
+				while(padding-- > 0)
 					putchar(' ');
 			}
 			break;
