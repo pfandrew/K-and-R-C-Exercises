@@ -15,9 +15,7 @@ int main(int argc, char *argv[]){
 	int (*fn)(int), i = 0, c;
 	char input[MAXINPUT];
 	
-	while(!isalnum(**argv))
-		(*argv)++;
-	if(strcmp("lower", *argv) == 0){
+	if(strcmp("./lower", *argv) == 0){
 		fn = &tolower;
 	}
 	else
