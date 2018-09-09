@@ -15,14 +15,6 @@ So this program's code is larger, and it is slightly slower.
 #include <stdlib.h>
 #define PERMS 0666
 
-enum _flags { //for 
-	_READ = 01,
-	_WRITE = 02,
-	_UNBUF = 04,
-	_EOF = 010,
-	_ERR = 020
-};
-
 typedef struct _io_buf {
 	int cnt;
 	char *ptr;
