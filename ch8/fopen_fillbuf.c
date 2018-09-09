@@ -1,7 +1,7 @@
 //program from section 8.5; implements _fillbuf and fopen
 #include <stdio.h>
 #include <fcntl.h>
-#include <stdlib.h>
+#include <stdlib.h> //malloc
 #define PERMS 0666
 
 enum _flags {
@@ -20,7 +20,7 @@ typedef struct _io_buf {
 	int fd;
 } _FILE;
 
-_FILE _io_b[FOPEN_MAX] = {
+_FILE _io_b[FOPEN_MAX] = { //mac has FOPEN_MAX
 	{0, (char *) 0, (char *) 0, _READ, 0},
 	{0, (char *) 0, (char *) 0, _WRITE, 1},
 	{0, (char *) 0, (char *) 0, _WRITE | _UNBUF, 2}
