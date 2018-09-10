@@ -9,7 +9,7 @@
 
 #define MAX_PATH 1024
 
-void fsize(char *);
+void f_size(char *);
 void dirwalk(char *, void (*fcn)(char *));
 
 int main(int argc, char **argv){
