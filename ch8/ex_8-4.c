@@ -46,7 +46,11 @@ int flushbuf(int, _FILE *);
 				? *(p)->ptr++ = (x) : flushbuf((x),p)
 
 int f_seek(_FILE *fp, long offset, int origin){
-
+	
+	if(fp->flag&_ERR)
+		return 0;
+	if(fp->base != NULL)
+		f_flush(fp);
 	return lseek(fp->fd, offset, origin) == -1 ? 0 : 1;
 	
 }
