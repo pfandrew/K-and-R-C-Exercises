@@ -10,7 +10,6 @@
 #define MAX_PATH 1024
 
 void fsize(char *);
-int stat(char *, struct stat *);
 void dirwalk(char *, void (*fcn)(char *));
 
 int main(int argc, char **argv){
