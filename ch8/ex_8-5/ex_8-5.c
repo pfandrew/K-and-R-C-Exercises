@@ -89,12 +89,3 @@ void dir_walk(char *dir, void (*fcn)(char *)){
 	closedir(dfd);
 }
 
-
-
-void close_dir(_DIR *dp){
-	if(dp){
-		close(dp->fd);
-		free(dp);
-	}
-}
-
