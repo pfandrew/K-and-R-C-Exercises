@@ -14,7 +14,7 @@
 //NOTE: on my mac one encounters errors when using read() on a directory fd. 
 //one is not allowed to use read() when the file descriptor refers to a directory. 
 //the call: read(dp->fd, (char *) &dirbuf, sizeof(dirbuf)) returns -1, with error
-//"is a directory". so it would appear that using readdir is required.
+//"is a directory". so it would appear that using system implemented readdir is required.
 
 void f_size(char *);
 void dir_walk(char *, void (*fcn)(char *));
