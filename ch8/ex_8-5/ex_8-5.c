@@ -15,7 +15,8 @@
 #include <errno.h>
 #define MAX_PATH 1024
 
-//NOTE - my OS requires a call to read(). thus the function read_dir from the book is useless, so it has been replaced
+//NOTE - my OS requires a call to readdir(), ie, i cannot use raw read() on a directory file descriptor. 
+//thus the function read_dir from the book is useless, so it has been replaced with readdir.
 //prints name, size, blocks, blocksize, permissions of inode
 
 
@@ -42,6 +43,8 @@ void f_size(char *name){
 	if(S_ISDIR(stbuf.st_mode)){ //S_ISDIR defined in sys/stat.h
 		dir_walk(name, f_size);
 	}
+	
+	//create permission string from first 9 bits of st_mode
 	int mode = stbuf.st_mode;
 	for(int i = 0; i < 9; mode = mode >> 1, i++)
 	{
