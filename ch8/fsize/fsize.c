@@ -92,7 +92,7 @@ void close_dir(_DIR *dp){
 Dirent *read_dir(_DIR *dp){
 	struct direct dirbuf;
 	static Dirent d;
-	while(readdir(dp->fd, (char*) &dirbuf, sizeof(dirbuf)) == sizeof(dirbuf)){
+	while(read(dp->fd, (char*) &dirbuf, sizeof(dirbuf)) == sizeof(dirbuf)){
 		if(dirbuf.d_ino == 0){
 			continue;
 		}
