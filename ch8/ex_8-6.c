@@ -1,0 +1,114 @@
+//compile: gcc ex_8-6.c -o calloc
+//run: ./calloc
+
+/*Exercise 8-6: The standard library function calloc(n, size) returns a pointer to n objects of size size, 
+with the storage initialized to zero. Write calloc, by calling malloc or by modifying it.*/
+
+#include <stdio.h>
+#define NALLOC 1024
+
+typedef long double Align; //my machine
+union header {
+	struct {
+		union header *ptr;
+		unsigned size;
+	} s;
+	Align x;
+};
+
+typedef union header Header;
+void free_(void *);
+void *m_alloc(unsigned);
+void *c_alloc(unsigned, unsigned);
+static Header base;
+static Header *freep = NULL;
+static Header *more_core(unsigned);
+
+int main(){
+	char *buf;
+	int i;
+	buf = (short *) c_alloc(10, sizeof(short));
+	for(i = 0; i < 10; i++){
+		printf("%hd", *(buf + i));
+	}
+}
+
+void *c_alloc(unsigned n, unsigned size){
+	int interval = size / sizeof(char);
+	int i = 0;
+	char *p = (char *) m_alloc(n*size);
+	while(i < n){
+		*(p + interval) = 0;
+		i++;
+	}
+	return p ;
+
+}
+
+void *m_alloc(unsigned nbytes){
+	Header *p, *prevp;
+	unsigned nunits;
+
+	nunits = (nbytes+sizeof(Header) - 1)/sizeof(Header) + 1;
+	if((prevp = freep) == NULL) {
+		base.s.ptr = freep = prevp = &base;
+		base.s.size = 0;
+	}
+
+	for(p = prevp->s.ptr; ; prevp = p, p = p->s.ptr){
+		if(p->s.size >= nunits){
+			if(p->s.size == nunits)
+				prevp->s.ptr = p->s.ptr;
+			else {
+				p->s.size -= nunits;
+				p += p->s.size;
+				p->s.size = nunits;
+			}
+			freep = prevp;
+			return (void *)(p + 1);
+		}
+		if(p == freep){
+			if((p = more_core(nunits)) == NULL)
+				return NULL;
+		}
+	}
+}
+
+static Header *more_core(unsigned nu){
+	char *cp, *sbrk(int);
+	Header *up;
+
+	if(nu < NALLOC)
+		nu = NALLOC;
+
+	cp = sbrk(nu * sizeof(Header));
+	if(cp == (char *) - 1)
+		return NULL;
+	up = (Header *) cp;
+	up->s.size = nu;
+	free_((void *)(up + 1));
+	return freep;
+}
+
+void free_(void *ap){
+	Header *bp, *p;
+
+	bp = (Header *)ap -1;
+	for(p = freep; !(bp > p && bp < p->s.ptr); p = p->s.ptr){
+		if(p >= p->s.ptr && (bp > p || bp < p->s.ptr))
+			break;
+	}
+
+	if(bp + bp->s.size == p->s.ptr) {
+		bp->s.size += p->s.ptr->s.size;
+		bp->s.ptr = p->s.ptr->s.ptr;
+	} else
+		bp->s.ptr = p->s.ptr;
+	if(p + p->s.size == bp){
+		p->s.size += bp->s.size;
+		p->s.ptr = bp->s.ptr;
+	} else
+		p->s.ptr = bp;
+
+	freep = p;
+}
