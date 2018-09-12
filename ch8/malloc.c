@@ -1,4 +1,6 @@
-//program example from 8.7; 
+//program from 8.7; 
+//sbrk is deprecated, exercises will be done with sbrk implemented with mmap
+//last program in the book :(
 #define NALLOC 1024
 
 typedef long double Align; //my machine
