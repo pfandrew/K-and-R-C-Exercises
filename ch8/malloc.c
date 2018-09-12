@@ -28,7 +28,6 @@ int main(){
 	*buf = '\0';
 	buf = buf - i;
 	printf("%s", buf);
-	free_(buf);
 }
 
 void *m_alloc(unsigned nbytes){
